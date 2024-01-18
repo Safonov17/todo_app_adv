@@ -1,0 +1,35 @@
+.input {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 45px;
+    margin-bottom: 20px;
+
+	&Value {
+		font: 1rem/1.4 'Roboto', sans-serif;
+		border: 2px solid #b1b1b1;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		border-right: none;
+		padding: 9px 10px;
+		background-color: #d8e2ef;
+		outline: none;
+
+		&::placeholder {
+			color: #7b7b7b;
+		}
+	}
+
+	&Button {
+		border-radius: none;
+		border: none;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		cursor: pointer;
+		background: #3f72af url('./image/plus.svg') no-repeat center center;
+		transition: opacity 0.3s;
+
+		&:hover {
+			opacity: 0.85;
+		}
+	}
+}

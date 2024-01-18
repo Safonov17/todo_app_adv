@@ -1,5 +1,4 @@
 import { useState, useCallback } from 'react'
-import plus from '/plus.svg'
 import styles from './index.module.scss'
 
 interface InputProps {
@@ -14,7 +13,7 @@ export const Input: React.FC<InputProps> = ({ onAdd }) => {
 	}, [inputValue])
 
 	return (
-		<div className={styles.inputWrapper}>
+		<div className={styles.input}>
 			<input
 				className={styles.inputValue}
 				type="text"
@@ -23,11 +22,13 @@ export const Input: React.FC<InputProps> = ({ onAdd }) => {
 				onKeyDown={evt => {
 					if (evt.key === 'Enter') addTask()
 				}}
+				placeholder="Название задачи"
 			/>
-			<button className={styles.inputButton} onClick={addTask} aria-label="Add">
-				{plus}
-			</button>
+			<button
+				className={styles.inputButton}
+				onClick={addTask}
+				aria-label="Add"
+			></button>
 		</div>
 	)
 }
-
